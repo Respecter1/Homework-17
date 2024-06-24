@@ -16,6 +16,7 @@ public:
 	~MyRabbit();
 
 	void Show() const;
+
 	//------------------------методи доступу---------------------------
 	str GetName() const { return name_; }
 	static int GetInHole() { return InHole; } // статична функція для отримання  InHole
@@ -49,8 +50,8 @@ MyRabbit::~MyRabbit() {
 
 void MyRabbit::Show() const {
 	if (InHole > GetInHole()) { std::cout << "There are " << InHole << " rabbits in the hole\n"; }
-	else if (InHole) { std::cout << "There is " << InHole << " rabbit in the hole\n"; }
-	else { std::cout << "There are no rabbits in the hole.\n"; }
+	else if (InHole) 	  { std::cout << "There is " << InHole << " rabbit in the hole\n"; }
+	else			  { std::cout << "There are no rabbits in the hole.\n"; }
 
 }
 
@@ -75,6 +76,6 @@ int main() {
 	std::cout << "\nRabbit Roman's age: " << (Romchik.*getAgePtr)() << " year(s)\n";
 	std::cout << "Rabbit Roman's height: " << (Romchik.*getHeightPtr)() << " cm\n";
 	std::cout << "Rabbit Roman's weight: " << (Romchik.*getWeightPtr)() << " kg\n\n";
-
+	//--------------------------------------------------------------------------
 	return 0;
 }
